@@ -1,3 +1,8 @@
+import sys
+import os
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 import streamlit as st
 from modules.auth import login_user, register_user
 from init_db import init_database
@@ -111,4 +116,5 @@ else:
                 except:
                     st.error("User already exists")
             else:
+
                 st.warning("All fields required")
